@@ -22,7 +22,7 @@ function init(){
 
 	//orbit controls for camera
 	controls = new THREE.OrbitControls(camera, renderer.domElement);
-	controls.enableZoom = true;
+	controls.enableZoom = false;
 	controls.enabled = true;
 	controls.maxPolarAngle = Math.PI/2;
 	
@@ -239,14 +239,14 @@ function getData(){
 			sumPerPoint[k] += btcData[j].data[k][SelectedData];
 		}
 	}
-	console.log(btcData);
+
 	//change in price
 	for(var k = 0; k<832; k++){
 		for(var j = 0; j<btcData.length; j++){
 			chndPerCurr[j].push((Math.abs(btcData[j].data[k+1][SelectedData]-btcData[j].data[k][SelectedData])/btcData[j].data[k+1][SelectedData]));//calculating change in volume
 		}
 	}
-	console.log(chndPerCurr);
+
 	
 	//Normalize volume data
 	//not used
@@ -258,7 +258,7 @@ function getData(){
 }
 
 function setColor(num){
-	console.log(num);
+
 	var color;
 	switch(num){	
 		case 0:
