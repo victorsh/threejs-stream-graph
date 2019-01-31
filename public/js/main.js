@@ -43,17 +43,18 @@ function init(){
 	var avgPerKtop = [];
 	var avgPerKbottom = [];
 	
-	for(var k = 0; k<days; k++){
-		var spritey = makeTextSprite( k, { 
-			fontsize: 20, borderColor: {r:255, g:0, b:0, a:0.0}, backgroundColor: {r:255, g:100, b:100, a:0.0} 
-		} );
-		spritey.position.set(
-			(radius) * Math.cos(Math.PI*2/(days/week)*(k/week)), 
-			(0), 
-			(radius) * Math.sin(Math.PI*2/(days/week)*(k/week))
-		);
-		scene.add( spritey );
-	}
+	// Disabled text
+	// for(var k = 0; k<days; k++){
+	// 	var spritey = makeTextSprite( k, { 
+	// 		fontsize: 20, borderColor: {r:255, g:0, b:0, a:0.0}, backgroundColor: {r:255, g:100, b:100, a:0.0} 
+	// 	} );
+	// 	spritey.position.set(
+	// 		(radius) * Math.cos(Math.PI*2/(days/week)*(k/week)), 
+	// 		(0), 
+	// 		(radius) * Math.sin(Math.PI*2/(days/week)*(k/week))
+	// 	);
+	// 	scene.add( spritey );
+	// }
 	//loops through each currency set
 	for(var j = 0; j<chndPerCurr.length; j++){
 		var sumPerK = 0;
@@ -180,18 +181,14 @@ function init(){
 	$('body').removeClass("loading");////////////////////////////////////////////////////Stop Load
 	
 	//set camera
-	camera.position.z = 20;
+	camera.position.z = 30;
 	animate();
 }
 
 function animate(){
 	requestAnimationFrame( animate );
-	update();
+	controls.update()
 	render();
-}
-
-function update(){
-
 }
 
 function render(){
