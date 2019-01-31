@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hw2</title>
+		<style>
+			body { margin: 0; overflow-x:hidden; overflow-y:hidden;}
+			canvas { width: 100%; height: 100% }
+			.modal {
+				display:    none;
+				position:   fixed;
+				z-index:    1000;
+				top:        0;
+				left:       0;
+				height:     100%;
+				width:      100%;
+				background: rgba( 255, 255, 255, .8 ) 
+							url('http://i.stack.imgur.com/FhHRx.gif') 
+							50% 50% 
+							no-repeat;
+			}
+
+			/* When the body has the loading class, we turn
+			   the scrollbar off with overflow:hidden */
+			body.loading {
+				overflow: hidden;   
+			}
+
+			/* Anytime the body has the loading class, our
+			   modal element will be visible */
+			body.loading .modal {
+				display: block;
+			}
+			#labels{
+				position:fixed;
+				left:10px;
+				top:10px;
+				width:80px;
+				height:200px;
+				background:#cccccc;
+			}
+			.label{
+				width:20px;
+				height:20px;
+				margin-left:10px;
+				display:inline-block;
+			}
+		</style>
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="js/Detector.js"></script>
+		<script type="text/javascript" src="js/stats.min.js"></script>
+		<script type="text/javascript" src="js/OrbitControls.js"></script>
+		<script type="text/javascript" src="js/axes.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div id='labels'>
+			<br>
+			<div class='label' style='background:#ff3300'></div>USD<br>
+			<div class='label' style='background:#ff9933'></div>EUR<br>
+			<div class='label' style='background:#00ff33'></div>CAD<br>
+			<div class='label' style='background:#33ff99'></div>AUD<br>
+			<div class='label' style='background:#0033ff'></div>GBP<br>
+			<div class='label' style='background:#0099ff'></div>JPY<br>
+			<div class='label' style='background:#33aaff'></div>PLN<br>
+		</div>
+		<div class="modal"><!-- Place at bottom of page --></div>
+	</body>
+</html>

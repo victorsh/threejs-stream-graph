@@ -1,0 +1,30 @@
+Victor Vahram Shahbazian
+
+Code Documentation
+Built using HTML, CSS, Javascript, Three.js, Node.js
+
+.:Functions:.
+init()
+	The is somewhat of the main function of the program. The init function is
+	used to initialize three.js and set it's parameters. 
+	
+animate()
+	This is the animation loop for three.js
+	
+update()
+	Nothing is being updated, but it was, it would be here.
+	
+render()
+	The function used to render the camera and the scene, again part of three.js
+	
+getData()
+	This function is used to collect and organize the data from the JSON files.
+	I am using ajax to load in these files as chrome does not allow for local
+	files to be loaded. The data is parsed and organized based on the percentage
+	of difference per day.
+	
+setColor()
+	This function is used to set the color of each stream depending on 
+	which data set is being generated. 
+	
+makeTextSprite() and roundRect() are taken and modified from https://stemkoski.github.io/Three.js/Sprite-Text-Labels.html

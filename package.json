@@ -1,0 +1,15 @@
+{
+  "name": "threejs-stream-graph",
+  "version": "1.0.0",
+  "description": "An application that displays data in the form of a stream graph.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Vahram Shahbazian",
+  "license": "ISC"
+}
