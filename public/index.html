@@ -4,50 +4,8 @@
 		<title>Threejs Stream Graph</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-		<style>
-			body { margin: 0; overflow-x:hidden; overflow-y:hidden; }
-			canvas { width: 100%; height: 100% }
-			.modal {
-				display:    none;
-				position:   fixed;
-				z-index:    1000;
-				top:        0;
-				left:       0;
-				height:     100%;
-				width:      100%;
-				background: rgba( 255, 255, 255, .8 ) 
-							url('http://i.stack.imgur.com/FhHRx.gif') 
-							50% 50% 
-							no-repeat;
-			}
+		<link href='style.css' rel='stylesheet' type='text/css' />
 
-			/* When the body has the loading class, we turn
-			   the scrollbar off with overflow:hidden */
-			body.loading {
-				overflow: hidden;   
-			}
-
-			/* Anytime the body has the loading class, our
-			   modal element will be visible */
-			body.loading .modal {
-				display: block;
-			}
-			#labels{
-				position:fixed;
-				left:10px;
-				top:10px;
-				width:80px;
-				height:200px;
-				background:#cccccc;
-				pointer-events: none;
-			}
-			.label{
-				width:20px;
-				height:20px;
-				margin-left:10px;
-				display:inline-block;
-			}
-		</style>
 		<script src="js/jquery-3.1.1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js" integrity="sha256-lt0ajSauzZnVSX3P22JwQ+kij14gNJDF1EZYfEV3zDU=" crossorigin="anonymous"></script>
 		<script src="js/Detector.js"></script>

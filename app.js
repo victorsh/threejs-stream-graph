@@ -15,7 +15,6 @@ if(process.env.NODE_ENV === "production") {
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req,res){
-	//res.send('hello! this is the main page');
 	res.sendFile(__dirname + '/public/index.html');
 });
 
