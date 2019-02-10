@@ -11,7 +11,6 @@ if(process.env.NODE_ENV === "production") {
 	port = 8080;
 }
 
-
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req,res){
