@@ -43,17 +43,20 @@ function init(){
 	var avgPerKtop = [];
 	var avgPerKbottom = [];
 	
-	for(var k = 0; k<days; k++){
-		var spritey = makeTextSprite( k, { 
-			fontsize: 20, borderColor: {r:255, g:0, b:0, a:0.0}, backgroundColor: {r:255, g:100, b:100, a:0.0} 
-		} );
-		spritey.position.set(
-			(radius+1) * Math.cos(Math.PI*2/(days/week)*(k/week)) + 4, 
-			(0), 
-			(radius+1) * Math.sin(Math.PI*2/(days/week)*(k/week)) + 2
-		);
-		scene.add( spritey );
-	}
+	// Create overlay text on canvas
+	// Text is off, need to figure out why
+	// for(var k = 0; k<days; k++){
+	// 	var spritey = makeTextSprite( k, { 
+	// 		fontsize: 20, borderColor: {r:255, g:0, b:0, a:0.0}, backgroundColor: {r:255, g:100, b:100, a:0.0} 
+	// 	} );
+	// 	spritey.position.set(
+	// 		(radius+1) * Math.cos(Math.PI*2/(days/week)*(k/week)) + 4, 
+	// 		(0), 
+	// 		(radius+1) * Math.sin(Math.PI*2/(days/week)*(k/week)) + 2
+	// 	);
+	// 	scene.add( spritey );
+	// }
+
 	// loops through each currency set
 	for(var j = 0; j<chndPerCurr.length; j++){
 		var sumPerK = 0;
@@ -306,6 +309,8 @@ function makeTextSprite( message, parameters )
 		
 	var canvas = document.createElement('canvas');
 	var context = canvas.getContext('2d');
+	// canvas.height =56;
+	// canvas.width = 56;
 	context.font = "Bold " + fontsize + "px " + fontface;
     
 	// get size data (height depends only on font size)
@@ -332,8 +337,7 @@ function makeTextSprite( message, parameters )
 	var texture = new THREE.Texture(canvas) 
 	texture.needsUpdate = true;
 
-	var spriteMaterial = new THREE.SpriteMaterial( 
-		{ map: texture, useScreenCoordinates: true} );
+	var spriteMaterial = new THREE.SpriteMaterial({ map: texture });
 	var sprite = new THREE.Sprite( spriteMaterial );
 	sprite.scale.set(10,5,1.0);
 	return sprite;	
