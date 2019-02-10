@@ -213,7 +213,7 @@ function getData(){
 	var currency = ["USD", "EUR", "CAD", "AUD", "GBP", "JPY", "PLN"];
 	
 	for(var i = 0; i<7; i++){
-		var my_url = "http://localhost:8080/btc_conv_data/MTGOX"+currency[i]+".json";
+		var my_url = "../btc_conv_data/MTGOX"+currency[i]+".json";
 		var json = (function () {
 			var json = null;
 			$.ajax({
